@@ -1,0 +1,479 @@
+<!-- 
+• Criar um projeto utilizando o Bootstrap;
+
+• Criar uma página que contenha os elementos:
+
+• Carousel de imagens; --- ok
+
+• Um layout com grid, onde na visão desktop teremos 3 itens por linha, no tablet 2 itens por linha e no smartphone 1 item por linha; ---ok
+
+• Inserir um card dentro das colunas, o conteúdo do card fica a seu critério; ---ok
+
+• Publique o projeto na Vercel; ---
+
+• Enviar o link através da plataforma da EBAC. 
+-->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Loja de aluguel de bicicletas</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lato&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oxygen&family=Pacifico&family=Playfair+Display:wght@600&family=Roboto&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <header class="navbar navbar-expand-lg sticky-top pt-4" id="cabecalho">
+            <div class="container">
+                <h1 class="m-0 font-title">RENCLE BYKES</h1>
+                <button
+                    class="navbar-toggler"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu-navegacao"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav
+                    class="navbar-collapse collapse justify-content-end"
+                    id="menu-navegacao"
+                >
+                    <ul
+                        class="nav nav-pills d-block d-md-flex justify-content-center"
+                    >
+                        <li class="nav-item fw-bold">
+                            <a href="#sobre" class="nav-link">Home</a>
+                        </li>
+
+                        <li class="nav-item fw-bold">
+                            <a href="#servicos" class="nav-link">Serviços</a>
+                        </li>
+                        <li class="nav-item fw-bold">
+                            <a href="#contato" class="nav-link">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div
+            data-bs-spy="scroll"
+            data-bs-target="#cabecalho"
+            data-bs-smooth-scroll="true"
+        >
+            <section id="sobre">
+                <div
+                    class="carousel slide"
+                    data-bs-ride="carousel"
+                    id="carousel"
+                >
+                    <div class="carousel-inner">
+                        <div
+                            class="carousel-item active"
+                            data-bs-interval="2000"
+                        >
+                            <img
+                                src="./images/slide1.jpg"
+                                alt="Área do restaurante"
+                            />
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img
+                                src="./images/slide2.jpg"
+                                alt="Duas taças de vinho tinto"
+                            />
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img
+                                src="./images/slide3.jpg"
+                                alt="Mes com diversas panelas de comida"
+                            />
+                        </div>
+                    </div>
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#carousel"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#carousel"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide-to="0"
+                            class="active"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide-to="1"
+                        ></button>
+                        <button
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide-to="2"
+                        ></button>
+                    </div>
+                </div>
+                <div class="pt-4 pb-4">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img
+                                    src="./images/fachada_loja.jpg"
+                                    alt="Prédio loja de bike"
+                                    class="w-100 d-block rounded mt-4"
+                                />
+                            </div>
+                            <div class="col-md-7">
+                                <h2 class="second-color font-title pt-4">
+                                    Sobre a loja
+                                </h2>
+                                <p>
+                                    Em nossa loja você encontrar os itens
+                                    necessários para ter uma bicicleta como seu
+                                    principal meio de transporte.
+                                </p>
+                                <p>
+                                    Você poderá alugar bicibletas para ir
+                                    trabalhar, estudar ou apenas para se
+                                    divertir num fim de semana com a família.
+                                    Além disso, temos bicicletas para competição
+                                    e utilizar para trabalhar fazendo entregas.
+                                </p>
+                                <p>
+                                    Temos uma gama de serviços para que você
+                                    possa ficar despreocupado. Por exemplo,
+                                    temos oficinas para manutenção e reparo de
+                                    bicicletas. Também temos diversos pontos de
+                                    entrega em que você conseguirá encontrar
+                                    perto de onde está para poder pegar ou
+                                    deixar sua bike.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="servicos" class="mt-4">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="second-color text-center font-title">
+                            Para aproveitar todos os momentos
+                        </h2>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/passeio_bike.jpg"
+                                    alt="Mulher parada ao lado de uma bicicleta"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-scooter"></i>
+                                    Bicicletas de passeio
+                                </h4>
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Alugue bicicletas por hora ou até dias
+                                        para passear com a família
+                                    </p>
+                                    <p>
+                                        Temos bicicletas de individuais até de 6
+                                        lugares
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/competicao_bike.jpg"
+                                    alt="Homem em competição de bicicleta na rua"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-bicycle"></i>
+                                    Bicicletas de competição
+                                </h4>
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Alugue bicicletas de alto padrão para
+                                        que gosta de competir de forma amadora,
+                                        mas levando a sério.
+                                    </p>
+                                    <p>
+                                        Temos suporte para trocar por peças de
+                                        mais precisão.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/trabalho_bike.jpg"
+                                    alt="Mulher parada ao lado de uma bicicleta"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-alarm"></i>
+                                    Bicicletas para ir trabalhar
+                                </h4>
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Alugue bicicletas por hora ou até dias
+                                        para passear com a família
+                                    </p>
+                                    <p>
+                                        Temos bicicletas de individuais até de 6
+                                        lugares
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/viagem_bike.jpg"
+                                    alt="Bicicleta na beira de uma estrada de terra"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-scooter"></i>
+                                    Bicicletas para viajar
+                                </h4>
+
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Alugue bicicletas por dias ou meses para
+                                        viajar
+                                    </p>
+                                    <p>
+                                        Temos bicicletas com materiais bem
+                                        duráveis e leves para utilizar por
+                                        longos períodos de viagem, podendo ser
+                                        bicicletas elétricas.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/por_do_sol_bike.jpg"
+                                    alt="Homem andando de bicicleta no por do sol"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-scooter"></i>
+                                    Bicicletas para entregas
+                                </h4>
+
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Alugue bicicletas por meses para
+                                        utilizar como ferramenta de trabalho.
+                                    </p>
+                                    <p>
+                                        Nossas bicicletas vêm com seguro incluso
+                                        para que você possa trabalhar com mais
+                                        segurança e tranquilidade.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-sm-6 card">
+                            <div class="card-body">
+                                <img
+                                    src="./images/conserto_bike.jpg"
+                                    alt="Homem andando de bicicleta no por do sol"
+                                    class="w-100 d-block rounded img-card"
+                                />
+                                <h4
+                                    class="card-title font-title pt-2 justify-content-center"
+                                >
+                                    <i class="bi bi-scooter"></i>
+                                    Oficina de bicicletas
+                                </h4>
+
+                                <div class="card-size mt-4">
+                                    <p>
+                                        Temos uma oficina especializada, para
+                                        que você possa deixar a bicicleta
+                                        alugada e pegar outra.
+                                    </p>
+                                    <p>
+                                        Também fazemos manutenção em sua
+                                        bicicleta. E você pode alugar uma
+                                        bicicleta para utilizar durante a
+                                        manutenção, com custo reduzido.
+                                    </p>
+                                </div>
+                                <button type="button" class="btn btn-format">
+                                    Alugar
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="contato" class="pt-4 pb-4">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="font-title">
+                            Fale <span class="second-color">Conosco</span>
+                        </h2>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7 mb-5">
+                            <form>
+                                <div class="mb-3">
+                                    <label
+                                        for="nome"
+                                        class="form-label fw-bold second-color"
+                                        >Nome:</label
+                                    >
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        id="nome"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label
+                                        for="email"
+                                        class="form-label fw-bold second-color"
+                                        >E-mail:
+                                    </label>
+                                    <input
+                                        class="form-control"
+                                        type="email"
+                                        id="email"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label
+                                        class="form-label fw-bold second-color"
+                                        for="telefone"
+                                        >Telefone:
+                                    </label>
+                                    <input
+                                        type="tel"
+                                        class="form-control"
+                                        id="telefone"
+                                        required
+                                    />
+                                </div>
+                                <div class="mb-3">
+                                    <label
+                                        for="mensagem"
+                                        class="form-label fw-bold second-color"
+                                        >Mensagem:
+                                    </label>
+                                    <textarea
+                                        id="mensagem"
+                                        class="form-control"
+                                        required
+                                    ></textarea>
+                                </div>
+                                <button
+                                    type="submit"
+                                    class="btn btn-format w-50"
+                                >
+                                    Enviar
+                                </button>
+                            </form>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="row">
+                                <h4 class="second-color font-title fs-4">
+                                    <i class="bi bi-hand-thumbs-up-fill"></i>
+                                    Redes sociais
+                                </h4>
+                                <ul class="social-links">
+                                    <li class="fs-5">
+                                        <a href="#">
+                                            <i
+                                                class="bi bi-facebook second-color"
+                                            ></i>
+                                        </a>
+                                    </li>
+                                    <li class="fs-5 ms-1 me-1">
+                                        <a href="#">
+                                            <i
+                                                class="bi bi-instagram second-color"
+                                            ></i>
+                                        </a>
+                                    </li>
+                                    <li class="fs-5 ms-1 me-1">
+                                        <a href="#">
+                                            <i
+                                                class="bi bi-whatsapp second-color"
+                                            ></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

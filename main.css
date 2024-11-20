@@ -1,0 +1,98 @@
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.font-title {
+    font-family: "Noto Serif", serif;
+    font-weight: bold;
+    font-style: italic;
+    font-variation-settings: "wdth" 100;
+}
+
+h1 {
+    color: #fff;
+}
+
+.navbar {
+    background-color: #00b894;
+}
+
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #00b894;
+}
+
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover {
+    color: #fff;
+}
+
+#servicos {
+    background-color: #f6fffd;
+}
+
+.btn-format {
+    background-color: #00b894;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+button:hover.btn-format {
+    background-color: #49f7d1;
+    color: #000;
+}
+
+h4 {
+    font-size: 1.2em;
+    color: #00b894;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 70vh;
+}
+
+.container img {
+    height: 50vh;
+}
+
+.img-card {
+    max-height: 200px;
+}
+
+.second-color {
+    color: #00b894;
+    font-weight: bold;
+}
+
+.card-size {
+    height: 200px;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        height: 280px;
+    }
+
+    .container img {
+        height: 30vh;
+    }
+
+    .img-card {
+        min-height: 50vh;
+    }
+
+}
